@@ -86,7 +86,7 @@ lab-tracker/
 
 ## Status
 
-🚧 In progress — Week 2 of Manufacturing Practice.
+ In progress — Week 2 of Manufacturing Practice.
 
 ## Roadmap
 
