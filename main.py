@@ -4,6 +4,8 @@ from pydantic import BaseModel
 from sqlalchemy.exc import IntegrityError
 from database import engine, Base, SessionLocal
 import models
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
@@ -111,3 +113,12 @@ def grade_submission(submission_id: int, grading: SubmissionGrade, db: Session =
     db.commit()
     db.refresh(sub)
     return sub
+
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/app")
+def serve_frontend():
+    return FileResponse("static/index.html")
+
+

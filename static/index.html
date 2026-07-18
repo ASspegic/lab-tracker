@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Lab Submission Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Course Lab Submission Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Courses -->
+    <section>
+      <h2>Courses</h2>
+      <form id="course-form">
+        <input type="text" id="course-name" placeholder="Course name" required>
+        <input type="text" id="course-code" placeholder="Code (e.g. SE201)" required>
+        <button type="submit">Add Course</button>
+      </form>
+      <ul id="course-list"></ul>
+    </section>
+
+    <!-- Labs -->
+    <section>
+      <h2>Labs</h2>
+      <form id="lab-form">
+        <input type="text" id="lab-title" placeholder="Lab title" required>
+        <input type="text" id="lab-deadline" placeholder="Deadline (e.g. 2026-07-25)" required>
+        <input type="number" id="lab-course-id" placeholder="Course ID" required>
+        <button type="submit">Add Lab</button>
+      </form>
+      <ul id="lab-list"></ul>
+    </section>
+
+    <!-- Submissions -->
+    <section>
+      <h2>Submissions</h2>
+      <form id="submission-form">
+        <input type="number" id="sub-lab-id" placeholder="Lab ID" required>
+        <input type="text" id="sub-student" placeholder="Student name" required>
+        <input type="text" id="sub-link" placeholder="File / link" required>
+        <button type="submit">Submit Lab</button>
+      </form>
+      <ul id="submission-list"></ul>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
